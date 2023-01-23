@@ -1,8 +1,17 @@
-//
-// Created by Administrator on 2023/1/23.
-//
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h> // _getch:不需要回车，直接获取输入的字符
 
-#ifndef STUDENTMS_STUDENTSM_H
-#define STUDENTMS_STUDENTSM_H
+typedef struct _Student {
+    int stuNum;
+    char name[20];
+    int score;
+} Student;
 
-#endif //STUDENTMS_STUDENTSM_H
+typedef struct _Node {
+    Student stu;
+    struct _Node *next;
+} Node;
+
+void welcome();
+void inputStudent(Node *head);
