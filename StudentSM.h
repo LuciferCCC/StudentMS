@@ -15,3 +15,11 @@ typedef struct _Node {
 
 void welcome();
 void inputStudent(Node *head);
+void printStudent(Node* head);
+void countStudent(Node *head);
+void findStudent(Node* head);
+void saveStudent(Node * head);
+void loadStudent(Node* head);
+void modifyStudent(Node *head);
+void deleteStudent(Node *head);
+void sortStudent(Node *head);
