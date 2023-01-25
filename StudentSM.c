@@ -2,7 +2,7 @@
 
 // 学生信息存入文件
 void saveStudent(Node *head) {
-    FILE *file = fopen("stu.txt", "w");
+    FILE *file = fopen("stu.txt", "a+");
     if (file == NULL) {
         printf("打开文件失败\n");
         return;
@@ -91,7 +91,7 @@ void findStudent(Node *head) {
 
 // 读取学生信息
 void loadStudent(Node *head) {
-    FILE *file = fopen("stu.txt", "r");
+    FILE *file = fopen("./stu.txt", "a+");
     if (file == NULL) {
         printf("未找到学生文件，跳过读取\n");
         exit(0);
@@ -176,13 +176,6 @@ void sortStudent(Node *head) {
 int main() {
     Node *head = (Node *) malloc(sizeof(Node));
     head->next = NULL;
-
-    FILE *f = fopen("dome.txt", "r");
-    if (f == NULL) {
-        printf("Fail to open file!\n");
-//        exit(0);  //退出程序（结束程序）
-    }
-    fclose(f);
 
     loadStudent(head);
 
